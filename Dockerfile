@@ -6,8 +6,8 @@ RUN \
     set -eux; \
     pip3 install --no-cache-dir -r requirements.txt
 
-COPY app ./app
-WORKDIR /app/app
+COPY app.py .
+WORKDIR /app
 ENV TZ=Asia/Shanghai
 ENV PYTHONPATH="/app:$PYTHONPATH"
 EXPOSE 6090/tcp
